@@ -49,19 +49,19 @@ describe World do
   context "moves the robot one unit forward in the direction it is currently facing." do
     it "moves the robot from (1,1,EAST) to (2,1,EAST)" do
       @world.place(1,1, 'EAST')
-      @world.robot_navigate
+      @world.navigate_robot
       expect(@world.robot.report).to eq('2,1,EAST')
     end
 
     it "moves the robot from (1,1,SOUTH) to (1,0,SOUTH)" do
       @world.place(1,1, 'SOUTH')
-      @world.robot_navigate
+      @world.navigate_robot
       expect(@world.robot.report).to eq('1,0,SOUTH')
     end
 
     it "will not move outside the table world" do
       @world.place(0,0, 'WEST')
-      @world.robot_navigate
+      @world.navigate_robot
       expect(@world.robot.report).to eq('0,0,WEST')
     end
   end

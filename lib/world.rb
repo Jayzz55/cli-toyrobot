@@ -15,7 +15,7 @@ class World
     end
   end
 
-  def robot_navigate
+  def navigate_robot
     new_x = @robot.pos_x
     new_y = @robot.pos_y
 
